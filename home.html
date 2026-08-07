@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IM Repair</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0D6EFD">
+
+</head>
+
+<body>
+
+<div class="top-bar">
+
+    <img src="images/logo.png" class="logo-small">
+
+    <div>
+        <h2>IM Repair</h2>
+        <p>Repair • Restore • Rely</p>
+    </div>
+
+</div>
+
+<div class="hero">
+
+<h1>Professional Cellphone Repairs</h1>
+
+<p>
+Fast • Reliable • Affordable
+</p>
+
+<a href="booking.html" class="hero-btn">
+Book a Repair
+</a>
+
+<p style="margin-top:15px;font-size:15px;">
+✔ Screen Repairs &nbsp; ✔ FRP Unlocks &nbsp; ✔ Software Repairs
+</p>
+
+</div>
+
+<div class="container">
+
+<h2>Welcome 👋</h2>
+
+<p class="welcome">
+Professional cellphone repairs you can trust.
+Search your phone model or book your repair today.
+</p>
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search your phone model...">
+
+<button id="searchBtn">
+🔍
+</button>
+
+</div>
+
+<h2>Quick Actions</h2>
+
+<div class="dashboard">
+
+<a href="booking.html" class="dash-card blue">
+<i class="fa-solid fa-calendar-check"></i>
+<span>Book Repair</span>
+</a>
+
+<a href="https://wa.me/27608547810" class="dash-card green">
+<i class="fab fa-whatsapp"></i>
+<span>WhatsApp</span>
+</a>
+
+<a href="tel:+27608547810" class="dash-card dark">
+<i class="fa-solid fa-phone"></i>
+<span>Call</span>
+</a>
+
+<a href="status.html" class="dash-card orange">
+<i class="fa-solid fa-screwdriver-wrench"></i>
+<span>Repair Status</span>
+</a>
+
+</div>
+
+<h2>Popular Brands</h2>
+
+<div class="brands">
+
+<div class="brand-card" onclick="searchBrand('Samsung')">
+<img src="images/brands/samsung.png">
+<p>Samsung</p>
+</div>
+
+<div class="brand-card" onclick="searchBrand('Apple')">
+<img src="images/brands/apple.png">
+<p>Apple</p>
+</div>
+
+<div class="brand-card" onclick="searchBrand('Honor')">
+<img src="images/brands/honor.png">
+<p>Honor</p>
+</div>
+
+<div class="brand-card" onclick="searchBrand('Huawei')">
+<img src="images/brands/huawei.png">
+<p>Huawei</p>
+</div>
+
+<div class="brand-card" onclick="searchBrand('Mobicel')">
+<img src="images/brands/mobicel.png">
+<p>Mobicel</p>
+</div>
+
+<div class="brand-card" onclick="searchBrand('Tecno')">
+<img src="images/brands/tecno.png">
+<p>Tecno</p>
+</div>
+
+<div class="brand-card" onclick="searchBrand('Oppo')">
+<img src="images/brands/oppo.png">
+<p>Oppo</p>
+</div>
+
+<div class="brand-card" onclick="searchBrand('Vivo')">
+<img src="images/brands/vivo.png">
+<p>Vivo</p>
+</div>
+
+</div>
+
+<h2>Why Choose IM Repair?</h2>
+
+<div class="services">
+
+<div class="service-card">
+⚡<br>
+Fast Repairs
+</div>
+
+<div class="service-card">
+🛡️<br>
+Quality Parts
+</div>
+
+<div class="service-card">
+💰<br>
+Affordable Prices
+</div>
+
+<div class="service-card">
+😊<br>
+Friendly Service
+</div>
+
+</div>
+
+<h2>Our Services</h2>
+
+<div class="services">
+
+<div class="service-card">📱<br>Screen Replacement</div>
+<div class="service-card">🔒<br>Password Unlock</div>
+<div class="service-card">📧<br>FRP / Gmail</div>
+<div class="service-card">🔋<br>Battery</div>
+<div class="service-card">🔌<br>Charging Port</div>
+<div class="service-card">📷<br>Camera</div>
+<div class="service-card">🔊<br>Speaker</div>
+<div class="service-card">⚙️<br>Software</div>
+
+</div>
+
+</div>
+
+<nav class="bottom-nav">
+
+<a href="Home.html">🏠<br>index</a>
+
+<a href="booking.html">📅<br>Book</a>
+
+<a href="status.html">🔧<br>Status</a>
+
+<a href="payments.html">💳<br>Payments</a>
+
+<a href="contact.html">📞<br>Contact</a>
+
+<a href="about.html">ℹ️<br>About</a>
+
+</nav>
+
+<script src="js/phones.js"></script>
+<script src="js/search.js"></script>
+
+<a href="https://wa.me/27608547810" class="floating-whatsapp">
+
+💬
+
+</a>
+
+<footer class="footer">
+
+<p>
+
+© 2026 IM Repair
+
+</p>
+
+<p>
+
+Repair • Restore • Rely
+
+</p>
+
+</footer>
+
+<script>
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+<script>
+
+document.querySelectorAll(".brand-card").forEach(card=>{
+
+card.addEventListener("mouseenter",()=>{
+
+card.style.transform="translateY(-8px)";
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.transform="translateY(0px)";
+
+});
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "IM Repair",
+  "short_name": "IM Repair",
+  "description": "Professional Cellphone Repair Services",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0D6EFD",
+  "theme_color": "#0D6EFD",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

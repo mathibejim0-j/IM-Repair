@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>IM Repair</title>
+
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="css/style.css">
+
+<meta name="theme-color" content="#0D6EFD">
+
+<script>
+
+setTimeout(function(){
+
+window.location="home.html";
+
+},2500);
+
+</script>
+
+</head>
+
+<body class="splash">
+
+<div class="splash-content">
+
+<img src="images/logo.png" class="splash-logo">
+
+<h1>IM Repair</h1>
+
+<p>Repair • Restore • Rely</p>
+
+<div class="loader"></div>
+
+</div>
+
+<footer class="footer">
+
+<p>
+
+© 2026 IM Repair
+
+</p>
+
+<p>
+
+Repair • Restore • Rely
+
+</p>
+
+</footer>
+
+<script>
+if("serviceWorker" in navigator){
+navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+</body>
+</html>

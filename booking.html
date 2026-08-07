@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Book Repair</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0D6EFD">
+
+</head>
+
+<body>
+
+<div class="top-bar">
+
+<img src="images/logo.png" class="logo-small">
+
+<div>
+
+<h2>Book Repair</h2>
+
+<p>IM Repair</p>
+
+</div>
+
+</div>
+
+<div class="container">
+
+<input id="name" type="text" placeholder="Full Name">
+
+<input id="number" type="tel" placeholder="Phone Number">
+
+<input id="brand" type="text" placeholder="Phone Brand">
+
+<input id="model" type="text" placeholder="Phone Model">
+
+<select id="repair">
+
+<option>Broken Screen</option>
+
+<option>Password Unlock</option>
+
+<option>FRP / Gmail Unlock</option>
+
+<option>Battery Replacement</option>
+
+<option>Charging Port</option>
+
+<option>Camera Repair</option>
+
+<option>Speaker Repair</option>
+
+<option>Software Repair</option>
+
+<option>Water Damage</option>
+
+<option>Other</option>
+
+</select>
+
+<input id="date" type="date">
+
+<textarea id="notes" placeholder="Additional Notes"></textarea>
+
+<button onclick="bookRepair()">
+
+Book via WhatsApp
+
+</button>
+
+</div>
+
+<script>
+
+function bookRepair(){
+
+const msg=`Hello IM Repair,
+
+Name: ${name.value}
+
+Phone: ${number.value}
+
+Brand: ${brand.value}
+
+Model: ${model.value}
+
+Repair: ${repair.value}
+
+Preferred Date: ${date.value}
+
+Notes: ${notes.value}`;
+
+window.open(
+"https://wa.me/27608547810?text="+encodeURIComponent(msg),
+"_blank"
+);
+
+}
+
+</script>
+
+<a href="https://wa.me/27608547810" class="floating-whatsapp">
+
+💬
+
+</a>
+
+<footer class="footer">
+
+<p>
+
+© 2026 IM Repair
+
+</p>
+
+<p>
+
+Repair • Restore • Rely
+
+</p>
+
+</footer>
+
+<script>
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+</body>
+</html>

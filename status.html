@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Repair Status</title>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="top-bar">
+
+<img src="images/logo.png" class="logo-small">
+
+<div>
+
+<h2>Repair Status</h2>
+
+<p>IM Repair</p>
+
+</div>
+
+</div>
+
+<div class="container">
+
+<h2>Track Your Repair</h2>
+
+<input
+id="job"
+type="text"
+placeholder="Enter Job Number (Example: IMR1001)">
+
+<button onclick="checkStatus()">
+
+Check Status
+
+</button>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+
+function checkStatus(){
+
+let job=document.getElementById("job").value.trim();
+
+let result=document.getElementById("result");
+
+if(job==="IMR1001"){
+
+result.innerHTML=`
+
+<div class="status-card">
+
+<h2>Samsung Galaxy A15</h2>
+
+<p><strong>Customer:</strong> Demo Customer</p>
+
+<div class="step done">✔ Received</div>
+
+<div class="step done">✔ Diagnosed</div>
+
+<div class="step active">🔧 Repair In Progress</div>
+
+<div class="step">Ready For Collection</div>
+
+</div>
+
+`;
+
+}else{
+
+result.innerHTML=`
+
+<div class="status-card">
+
+<h2>Job Not Found</h2>
+
+<p>Please contact IM Repair on WhatsApp.</p>
+
+<a class="whatsapp-btn"
+
+href="https://wa.me/27608547810">
+
+Contact IM Repair
+
+</a>
+
+</div>
+
+`;
+
+}
+
+}
+
+</script>
+
+<a href="https://wa.me/27608547810" class="floating-whatsapp">
+
+💬
+
+</a>
+
+<footer class="footer">
+
+<p>
+
+© 2026 IM Repair
+
+</p>
+
+<p>
+
+Repair • Restore • Rely
+
+</p>
+
+</footer>
+
+<script>
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+</body>
+</html>
